@@ -1,0 +1,42 @@
+# Ignore Android Studio specific files
+.idea/
+*.iml
+.gradle/
+build/
+captures/
+output.json
+
+# Ignore local configuration files
+/local.properties
+*.keystore
+*.jks
+
+# Ignore Gradle files
+.gradle/
+build/
+*/build/
+
+# Ignore logs and crash reports
+*.log
+crashlytics-build.properties
+fabric.properties
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore environment and API keys
+.env
+api_keys.properties
+
+# Ignore dependency cache (can be rebuilt)
+.caches/
+.gradle/caches/
+
+# Ignore miscellaneous files
+*.apk
+*.aar
+*.jar
+
+# Ignore test and profiling files
+*.hprof
