@@ -13,7 +13,25 @@
         android:theme="@style/Theme.Customer_mobile"
         tools:targetApi="31">
         <activity
+            android:name=".ui.OtpVerifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.NewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
