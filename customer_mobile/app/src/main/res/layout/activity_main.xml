@@ -21,7 +21,7 @@
         android:backgroundTint="@color/white"
         app:fabAlignmentMode="center"
         app:fabAnchorMode="cradle"
-        app:fabCradleVerticalOffset="14dp"
+        app:fabCradleVerticalOffset="12dp"
         app:fabCradleMargin="8dp"
         app:fabCradleRoundedCornerRadius="50dp">
 
@@ -32,7 +32,9 @@
             app:labelVisibilityMode="labeled"
             android:layout_marginEnd="8dp"
             android:background="@android:color/transparent"
-            app:itemBackground="@null"
+            app:itemIconSize="28dp"
+            app:itemIconTint="@color/bottom_navigation_selector"
+            app:itemTextColor="@color/bottom_navigation_selector"
             app:menu="@menu/bottom_menu"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -41,9 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="Camera"
-        android:src="@drawable/ic_lock"
+        android:src="@drawable/ic_camera"
+        app:maxImageSize="52dp"
         app:fabSize="normal"
-        android:backgroundTint="@color/purple"
+        app:tint="@color/purple"
+        android:backgroundTint="@color/white"
         app:layout_anchor="@id/bottomAppBar"
         app:layout_anchorGravity="center" />
 
