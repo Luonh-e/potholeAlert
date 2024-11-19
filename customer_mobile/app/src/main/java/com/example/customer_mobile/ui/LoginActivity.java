@@ -73,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // Điều hướng sang màn hình quên mật khẩu
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,14 +89,13 @@ public class LoginActivity extends AppCompatActivity {
         apiService.login(loginRequest).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                Log.d("Login", "Respon: " + response.body());
                 if (response.isSuccessful() && response.body() != null) {
-                    String token = response.body().getUser().getEmail();
-                    Toast.makeText(LoginActivity.this, "Login successful: " + token, Toast.LENGTH_SHORT).show();
-                    Log.d("Login", "Token: " + token);
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                    
                 } else {
-                    Log.d("Login", "Login fail " );
-                    Toast.makeText(LoginActivity.this, "Login failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login failed: Invalid email or password", Toast.LENGTH_SHORT).show();
                 }
             }
 
