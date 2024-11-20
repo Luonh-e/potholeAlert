@@ -12,7 +12,7 @@ public class ApiClient {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create()) // Sử dụng Gson để parse JSON
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return retrofit;
