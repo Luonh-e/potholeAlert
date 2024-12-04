@@ -91,9 +91,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Toast.makeText(LoginActivity.this, "Login success", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     finish();
-                    
                 } else {
                     Toast.makeText(LoginActivity.this, "Login failed: Invalid email or password", Toast.LENGTH_SHORT).show();
                 }
@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("Login", "Error: ", t);
+                Log.e("Login", "Error: ");
             }
         });
     }

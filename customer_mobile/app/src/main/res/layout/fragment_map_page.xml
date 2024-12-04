@@ -13,7 +13,8 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MapsActivity" />
+        tools:context=".MapsActivity"
+        android:layout_marginBottom="64dp"/>
 
     <SearchView
         android:id="@+id/search_view"
@@ -22,36 +23,22 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@android:color/white"
+        android:background="@drawable/custom_edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/zoom_buttons_container"
+    <Button
+        android:id="@+id/start_journey_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        android:orientation="vertical"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:drawableLeft="@drawable/ic_directions"
+        android:text="Bắt đầu"
+        android:backgroundTint="@color/purple"
+        app:layout_constraintBottom_toBottomOf="@+id/map"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/zoom_in_button"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/white"
-            android:text="+"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/zoom_out_button"
-            android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/white"
-            android:text="-"
-            android:textColor="@color/black" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

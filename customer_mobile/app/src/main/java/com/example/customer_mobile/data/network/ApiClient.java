@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL = "http://10.0.2.2:5001/api/";
+    private static final String BASE_URL = "http://luonh.io.vn/api/";
 
     private static Retrofit retrofit;
 

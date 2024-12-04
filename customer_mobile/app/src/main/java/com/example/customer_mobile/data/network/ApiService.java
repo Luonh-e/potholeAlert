@@ -1,5 +1,6 @@
 package com.example.customer_mobile.data.network;
 
+import com.example.customer_mobile.data.model.EmailRequest;
 import com.example.customer_mobile.data.model.LoginRequest;
 import com.example.customer_mobile.data.model.LoginResponse;
 import com.example.customer_mobile.data.model.RegisterRequest;
@@ -15,5 +16,9 @@ public interface ApiService {
 
     @POST("auth/register")
     Call<RegisterResponse> register(@Body RegisterRequest registerRequest);
+
+    @POST("auth/forgot-password")
+    Call<Void> sendOtp(@Body EmailRequest emailRequest);
+
 }
 
